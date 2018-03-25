@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+ <head>
+	<title>form
+	</title>
+		<link rel="manifest" href="manifest.json">
+
+ <style>
+	body
+	{
+	background-image:url("https://wallpapersite.com/images/wallpapers/future-bus-1366x768-mercedes-benz-electric-bus-autonomous-hd-1646.jpg");
+	background-repeat:no-repeat;
+	}
+  </style>
+ </head>
+   <body>
+      <table align="center">
+         <marquee><font size="7" color="white"><b>ONLINE BUS RESERVATION</marquee></font></b>
+         <br><br><br>
+			<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm();" method="post">
+<tr>
+<td><font size="5" color="white">Email ID *: </font></td>
+<td><font size="5" color="white"><input type = "email" name = "email" /> </font>(max 50 characters)<br><br></td>
+</tr>
+<tr>
+<td><font size="5" color="white">First name * :</font></td>
+<td> <font size="5"color="white"><input type = "text" name = "first_name" required/></font> (max 20 characters)<br><br></td>
+</tr>
+<tr>
+<td><font size="5"color="white">Last name *:</font> </td>
+<td><font size="5"color="white"><input type = "text" name = "last_name" required/> </font>(max 20 characters)<br><br></td>
+</tr>
+<tr>
+<td><font size="5"color="white">Gender *: </font></td>
+<td><font size="5"color="white"> <input type = "radio" name = "gender" value = "male" required> Male
+         <input type = "radio" name = "gender" value = "female">female</font><br><br></td>
+</tr>
+<tr>
+<td> <font size="5"color="white">Date of journey *:</font></td>
+<td><font size="5"color="white"><input type = "date" name = "date of journey" required/></font><br><br></td>
+</tr>
+<tr>
+
+<td> <font size="5"color="white">From: </font></td>
+<td><font size="5"color="white"><select name = "dropdown">
+            <option value = "Coimbatore" selected>Coimbatore</option>
+            <option value = "chennai">Chennai</option>
+            <option value = "bangalore">Bangalore</option>
+<option value = "cochin">cochin</option></font>
+         </select><br><br></td>
+</tr>
+<tr>
+<td><font size="5"color="white"> To:</font></td>
+<td><font size="5"color="white"><select name = "dropdown">
+            <option value = "Coimbatore" selected>Coimbatore</option>
+            <option value = "chennai">Chennai</option>
+            <option value = "bangalore">Bangalore</option>
+<option value = "cochin">cochin</option></font>
+         </select><br><br></td>
+</tr>
+<tr>
+<td><font size="5"color="white">Category:</font></td>
+<td> <font size="5"color="white"><input type = "checkbox" name = "SLEEPER" value = "on">Sleeper
+         <input type = "checkbox" name = "SEMISLEEPER" value = "on"> Semisleeper</font><br><br></td>
+</tr>
+<tr>
+<td><font size="5"color="white">Current date and time:</font></td>
+<td> <font size="3"color="white"><button onclick="this.innerHTML=Date()">date and time</font><br><br></td>
+</tr>
+<tr>
+<td><font size="5" color="white">Mobile no :</font></td>
+<td> <font size="5"color="white"><input type = "number" name = "mobile_number"/><font><br><br></td>
+</tr>
+<tr>
+<td> <font size="5"color="white" >Address: </font></td>
+<td> <font size="5"><textarea rows = "5" cols = "30" name = "description" required>
+            
+         </textarea></font><br><br></td>
+</tr>
+<tr>
+<td> <input type = "submit" name = "submit" value = "Submit" /><td>
+</tr>
+</table>
+
+
+</form>
+</table>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    if (x == "") {
+        alert("Email_id must be filled out");
+        return false;
+    }
+}
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
+</script>
+<script src="sw.js"></script>
+</body>
+</html>
